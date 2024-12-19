@@ -1,6 +1,6 @@
 import Card from "@/components/Card";
 import { getProducts } from "@/helpers/getProducts";
-import { usePublic } from "@/hooks/usePublic";
+import { IProduct } from "@/interfaces/IProduct";
 import Link from "next/link";
 
 export default async function Home() {

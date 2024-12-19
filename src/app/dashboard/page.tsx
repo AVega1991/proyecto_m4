@@ -2,13 +2,14 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import { usePrivate } from "@/hooks/usePrivate";
+import { IOrder } from "@/interfaces/IOrder";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 export default function Dashboard() {
   const { user, token } = useAuth();
-  const [userOrders, setUserOrders] = useState([]);
+  const [userOrders, setUserOrders] = useState<IOrder[]>([]);
   console.log(userOrders);
 
   usePrivate();

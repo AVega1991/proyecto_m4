@@ -112,7 +112,7 @@ export default function Cart() {
                       );
                     }
                   }, [])
-                  .map((e: Partal<IProduct>, i: number) => {
+                  .map((e: Partial<IProduct>, i: number) => {
                     return (
                       <tr
                         key={e.id ? e.id + "" + i : i.toString()}
@@ -134,9 +134,11 @@ export default function Cart() {
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-500">
-                            $ {e.price * e.count}
-                          </div>
+                          {e.price && e.count && (
+                            <div className="text-sm text-gray-500">
+                              $ {e.price * e.count}
+                            </div>
+                          )}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-500">

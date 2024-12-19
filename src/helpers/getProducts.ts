@@ -1,3 +1,4 @@
+import { IProduct } from "@/interfaces/IProduct";
 import axios from "axios";
 
 export const getProducts = async (): Promise<IProduct[]> => {
